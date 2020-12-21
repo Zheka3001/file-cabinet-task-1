@@ -119,13 +119,13 @@ Commit "Move validation from template method to validation strategy."
 
 | Class 1                    | Class 2            | Relationship |
 |----------------------------|--------------------|--------------|
-| FileCabinetService         | IRecordValidator   |              |
-| FileCabinetDefaultService  | FileCabinetService |              |
-| FileCabinetCustomService   | FileCabinetService |              |
-| FileCabinetDefaultService  | DefaultValidator   |              |
-| FileCabinetCustomService   | CustomValidator    |              |
-| DefaultValidator           | IRecordValidator   |              |
-| CustomValidator            | IRecordValidator   |              |
+| FileCabinetService         | IRecordValidator   | has-a        |
+| FileCabinetDefaultService  | FileCabinetService | is-a         |
+| FileCabinetCustomService   | FileCabinetService | is-a         |
+| FileCabinetDefaultService  | DefaultValidator   | has-a        |
+| FileCabinetCustomService   | CustomValidator    | has-a        |
+| DefaultValidator           | IRecordValidator   | is-a         |
+| CustomValidator            | IRecordValidator   | is-a         |
 
 3. Структура приложения стала сложной, однако эту сложность можно уменьшить. Структуру приложения можно упросить, сделать код более понятным и читаемым. 
 
